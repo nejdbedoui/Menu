@@ -1,0 +1,18 @@
+<h1 style="text-align: center;" class="responsive">Notre Menu</h1>
+<div style="justify-content: center;display: flex;">
+<div style="width: 90%;" class="row row-cols-1 row-cols-md-4 g-4">
+    <div style="height: fit-content; "  *ngFor="let produit of produit" class="col">
+      <div  class="card">
+        <div class="img-card">
+          <img *ngIf="produit.image" class="card-img-top" src="data:image/jpeg;base64,{{ produit.image }}" alt="Product Image">
+          <img *ngIf="!produit.image" class="card-img-top" src="/assets/ad.png" alt="Product Image">
+        </div>
+        <div class="card-body" >
+          <h5 class="card-title" >{{produit.nom}}</h5>
+          <p class="card-text">{{produit.prix}} DT</p>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
